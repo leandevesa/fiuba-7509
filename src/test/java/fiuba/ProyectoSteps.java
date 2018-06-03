@@ -7,10 +7,7 @@ import cucumber.api.java.es.Entonces;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 import static org.junit.Assert.assertFalse;
 
@@ -29,14 +26,9 @@ public class ProyectoSteps {
         proyecto = new Proyecto(NOMBRE, TIPO, FECHA_INICIO, unaFechaFin);
     }
 
-    private Date transformDate(String unaFecha) throws Exception {
-        DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-        return format.parse(unaFecha);
-    }
-
     @Dado("^que mi proyecto debe estar listo para el \"(.*?)\"$")
     public void establecer_fecha_finalizacion(String fechaFinalizacion) throws Throwable {
-        Date fechaFin = transformDate(fechaFinalizacion);
+        Date fechaFin = Utils.transformDate(fechaFinalizacion);
         crearProyectoConFechaFin(fechaFin);
     }
 
@@ -45,10 +37,25 @@ public class ProyectoSteps {
         // El estado no se modifica
     }
 
+    @Cuando("^hay problemas y se atrasa \"(.*?)\" meses$")
+    public void proyecto_se_atrasa_meses(int cantMeses) throws Throwable {
+        Date nuevaFechaFin = Utils.addMonthsToDate(proyecto.getFechaFin(), cantMeses);
+        proyecto.updateFechaFin(nuevaFechaFin);
+    }
+
     @Entonces("^la fecha de finalizacion debe ser \"(.*?)\"$")
     public void la_operacion_es_rechazada_y_el_saldo_final_es_pesos(String fechaFinalizacion) throws Throwable {
-        Date fechaFin = transformDate(fechaFinalizacion);
+        Date fechaFin = Utils.transformDate(fechaFinalizacion);
         assertTrue(fechaFin.equals(proyecto.getFechaFin()));
     }
 
+    @Entonces("^el proyecto esta atrasado$")
+    public void el_proyecto_esta_atrasado() throws Throwable {
+        assertTrue(proyecto.estaAtrasado());
+    }
+
+    @Entonces("^el proyecto esta en tiempo$")
+    public void el_proyecto_esta_en_tiempo() throws Throwable {
+        assertFalse(proyecto.estaAtrasado());
+    }
 }
