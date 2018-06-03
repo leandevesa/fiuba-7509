@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fiuba.RunFeatureTest" time="0.057" tests="16" errors="0" skipped="0" failures="0">
+<testsuite name="fiuba.RunFeatureTest" time="0.043" tests="24" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
@@ -59,20 +59,28 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto esta en tiempo" time="0.005"/>
-  <testcase name="Cuando el proyecto va segun lo planeado" classname="Escenario: Proyecto esta en tiempo" time="0.002"/>
-  <testcase name="Entonces el proyecto esta en tiempo" classname="Escenario: Proyecto esta en tiempo" time="0"/>
-  <testcase name="Escenario: Proyecto esta en tiempo" classname="Escenario: Proyecto esta en tiempo" time="0.005"/>
-  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0.002"/>
-  <testcase name="Cuando el proyecto va segun lo planeado" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0.005"/>
-  <testcase name="Entonces la fecha de finalizacion debe ser &quot;16/07/2018&quot;" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0.001"/>
-  <testcase name="Escenario: Proyecto sin problemas con misma fecha de finalizacion" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0.003"/>
-  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto atrasado" time="0.001"/>
-  <testcase name="Cuando hay problemas y se atrasa &quot;6&quot; meses" classname="Escenario: Proyecto atrasado" time="0.001"/>
-  <testcase name="Entonces el proyecto esta atrasado" classname="Escenario: Proyecto atrasado" time="0.005"/>
-  <testcase name="Escenario: Proyecto atrasado" classname="Escenario: Proyecto atrasado" time="0.021"/>
+  <testcase name="Dado que mi proyecto tiene &quot;3&quot; tickets de: &quot;10hs,40hs,20hs&quot;" classname="Escenario: Saber costo de proyecto con 3 tickets" time="0.002"/>
+  <testcase name="Cuando se asignan correspondientemente empleados: &quot;jr,sr,jr&quot;" classname="Escenario: Saber costo de proyecto con 3 tickets" time="0.006"/>
+  <testcase name="Entonces el proyecto tiene un costo de &quot;1500&quot;" classname="Escenario: Saber costo de proyecto con 3 tickets" time="0"/>
+  <testcase name="Escenario: Saber costo de proyecto con 3 tickets" classname="Escenario: Saber costo de proyecto con 3 tickets" time="0.002"/>
+  <testcase name="Dado que mi proyecto tiene un presupuesto de &quot;30000&quot;" classname="Escenario: Saber presupuesto del proyecto" time="0"/>
+  <testcase name="Cuando el proyecto va segun lo planeado" classname="Escenario: Saber presupuesto del proyecto" time="0.002"/>
+  <testcase name="Entonces el presupuesto de mi proyecto es de &quot;30000&quot;" classname="Escenario: Saber presupuesto del proyecto" time="0.002"/>
+  <testcase name="Escenario: Saber presupuesto del proyecto" classname="Escenario: Saber presupuesto del proyecto" time="0.004"/>
+  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto esta en tiempo" time="0.004"/>
+  <testcase name="Cuando el proyecto va segun lo planeado" classname="Escenario: Proyecto esta en tiempo" time="0.001"/>
+  <testcase name="Entonces el proyecto esta en tiempo" classname="Escenario: Proyecto esta en tiempo" time="0.007"/>
+  <testcase name="Escenario: Proyecto esta en tiempo" classname="Escenario: Proyecto esta en tiempo" time="0.009"/>
+  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0"/>
+  <testcase name="Cuando el proyecto va segun lo planeado" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0"/>
+  <testcase name="Entonces la fecha de finalizacion debe ser &quot;16/07/2018&quot;" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0"/>
+  <testcase name="Escenario: Proyecto sin problemas con misma fecha de finalizacion" classname="Escenario: Proyecto sin problemas con misma fecha de finalizacion" time="0.002"/>
+  <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto atrasado" time="0"/>
+  <testcase name="Cuando hay problemas y se atrasa &quot;6&quot; meses" classname="Escenario: Proyecto atrasado" time="0"/>
+  <testcase name="Entonces el proyecto esta atrasado" classname="Escenario: Proyecto atrasado" time="0"/>
+  <testcase name="Escenario: Proyecto atrasado" classname="Escenario: Proyecto atrasado" time="0.001"/>
   <testcase name="Dado que mi proyecto debe estar listo para el &quot;16/07/2018&quot;" classname="Escenario: Proyecto se atrasa 3 meses" time="0.001"/>
-  <testcase name="Cuando hay problemas y se atrasa &quot;3&quot; meses" classname="Escenario: Proyecto se atrasa 3 meses" time="0.001"/>
-  <testcase name="Entonces la fecha de finalizacion debe ser &quot;16/10/2018&quot;" classname="Escenario: Proyecto se atrasa 3 meses" time="0.001"/>
-  <testcase name="Escenario: Proyecto se atrasa 3 meses" classname="Escenario: Proyecto se atrasa 3 meses" time="0.003"/>
+  <testcase name="Cuando hay problemas y se atrasa &quot;3&quot; meses" classname="Escenario: Proyecto se atrasa 3 meses" time="0"/>
+  <testcase name="Entonces la fecha de finalizacion debe ser &quot;16/10/2018&quot;" classname="Escenario: Proyecto se atrasa 3 meses" time="0"/>
+  <testcase name="Escenario: Proyecto se atrasa 3 meses" classname="Escenario: Proyecto se atrasa 3 meses" time="0"/>
 </testsuite>

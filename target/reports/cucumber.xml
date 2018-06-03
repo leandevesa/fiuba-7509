@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="0.180694">
-<testcase classname="Estado de proyecto" name="Proyecto esta en tiempo" time="0.174239">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="0.244866">
+<testcase classname="Valor del proyecto" name="Saber costo de proyecto con 3 tickets" time="0.239356">
+<system-out><![CDATA[Dado que mi proyecto tiene "3" tickets de: "10hs,40hs,20hs".................passed
+Cuando se asignan correspondientemente empleados: "jr,sr,jr"................passed
+Entonces el proyecto tiene un costo de "1500"...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Valor del proyecto" name="Saber presupuesto del proyecto" time="0.000738">
+<system-out><![CDATA[Dado que mi proyecto tiene un presupuesto de "30000"........................passed
+Cuando el proyecto va segun lo planeado.....................................passed
+Entonces el presupuesto de mi proyecto es de "30000"........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Estado de proyecto" name="Proyecto esta en tiempo" time="0.001413">
 <system-out><![CDATA[Dado que mi proyecto debe estar listo para el "16/07/2018"..................passed
 Cuando el proyecto va segun lo planeado.....................................passed
 Entonces el proyecto esta en tiempo.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Estado de proyecto" name="Proyecto sin problemas con misma fecha de finalizacion" time="0.001218">
+<testcase classname="Estado de proyecto" name="Proyecto sin problemas con misma fecha de finalizacion" time="0.001112">
 <system-out><![CDATA[Dado que mi proyecto debe estar listo para el "16/07/2018"..................passed
 Cuando el proyecto va segun lo planeado.....................................passed
 Entonces la fecha de finalizacion debe ser "16/07/2018".....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Estado de proyecto" name="Proyecto atrasado" time="0.003738">
+<testcase classname="Estado de proyecto" name="Proyecto atrasado" time="0.001048">
 <system-out><![CDATA[Dado que mi proyecto debe estar listo para el "16/07/2018"..................passed
 Cuando hay problemas y se atrasa "6" meses..................................passed
 Entonces el proyecto esta atrasado..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Estado de proyecto" name="Proyecto se atrasa 3 meses" time="0.001499">
+<testcase classname="Estado de proyecto" name="Proyecto se atrasa 3 meses" time="0.001199">
 <system-out><![CDATA[Dado que mi proyecto debe estar listo para el "16/07/2018"..................passed
 Cuando hay problemas y se atrasa "3" meses..................................passed
 Entonces la fecha de finalizacion debe ser "16/10/2018".....................passed

@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 
@@ -26,15 +27,44 @@ public class ProyectoSteps {
         proyecto = new Proyecto(NOMBRE, TIPO, FECHA_INICIO, unaFechaFin);
     }
 
+    private void crearProyecto() {
+        proyecto = new Proyecto(NOMBRE, TIPO, FECHA_INICIO, FECHA_FIN);
+    }
+
     @Dado("^que mi proyecto debe estar listo para el \"(.*?)\"$")
     public void establecer_fecha_finalizacion(String fechaFinalizacion) throws Throwable {
         Date fechaFin = Utils.transformDate(fechaFinalizacion);
         crearProyectoConFechaFin(fechaFin);
     }
 
+    @Dado("^que mi proyecto tiene \"(.*?)\" tickets de: \"(.*?)\"$")
+    public void establecer_tickets(String fechaFinalizacion, String horas) throws Throwable {
+        crearProyecto();
+        List<Ticket> tickets = Utils.mockTickets(horas);
+        for (Ticket ticket: tickets) {
+            proyecto.agregarTicket(ticket);
+        }
+    }
+
+    @Dado("^que mi proyecto tiene un presupuesto de \"(.*?)\"$")
+    public void establecer_presupuesto(double presupuesto) throws Throwable {
+        crearProyecto();
+        proyecto.setPresupuesto(presupuesto);
+    }
+
     @Cuando("^el proyecto va segun lo planeado$")
     public void proyecto_en_tiempo() throws Throwable {
         // El estado no se modifica
+    }
+
+    @Cuando("^se asignan correspondientemente empleados: \"(.*?)\"$")
+    public void se_asignan_empleados(String seniorities) throws Throwable {
+        List<Empleado> empleados = Utils.mockEmpleados(seniorities);
+        List<Ticket> tickets = proyecto.getTickets();
+        
+        for (int i = 0; i < empleados.size(); i++) {
+            tickets.get(i).asignarEmpleado(empleados.get(i));
+        }
     }
 
     @Cuando("^hay problemas y se atrasa \"(.*?)\" meses$")
@@ -57,5 +87,15 @@ public class ProyectoSteps {
     @Entonces("^el proyecto esta en tiempo$")
     public void el_proyecto_esta_en_tiempo() throws Throwable {
         assertFalse(proyecto.estaAtrasado());
+    }
+
+    @Entonces("^el proyecto tiene un costo de \"(.*?)\"$")
+    public void el_proyecto_tiene_costo_de(double costo) throws Throwable {
+        assertEquals(costo, proyecto.getCostoReal(), 1);
+    }
+
+    @Entonces("^el presupuesto de mi proyecto es de \"(.*?)\"$")
+    public void el_proyecto_tiene_presupuesto_de(double presupuesto) throws Throwable {
+        assertEquals(presupuesto, proyecto.getPresupuesto(), 1);
     }
 }
