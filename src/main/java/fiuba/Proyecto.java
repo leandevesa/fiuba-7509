@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.List;
 
 public class Proyecto {
+
     private String nombre;
+    private String nombreCliente;
     private Date fechaInicio;
     private Date fechaFinOriginal;
     private Date fechaFinActualizada;
@@ -15,15 +17,34 @@ public class Proyecto {
     private String estado;
     private List<String> requisitos;
     private List<Ticket> tickets;
+    private List<Empleado> empleados;
 
-    public Proyecto(String nombre, String tipo, Date fechaInicio, Date fechaFin) {
+    public Proyecto(String nombre, String tipo, Date fechaInicio, Date fechaFin, String nombreCliente) {
         this.nombre = nombre;
+        this.nombreCliente = nombreCliente;
         this.tipo = tipo;
         this.fechaInicio = fechaInicio;
         this.fechaFinOriginal = fechaFin;
         this.gastos = 0;
         this.presupuesto = 0;
         this.tickets = new ArrayList<Ticket>();
+        this.empleados = new ArrayList<Empleado>();
+    }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void agregarEmpleado(Empleado empleado) {
+        empleados.add(empleado);
+    }
+
+    public List<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public int getCantidadEmpleados() {
+        return empleados.size();
     }
 
     public void agregarTicket(Ticket ticket) {

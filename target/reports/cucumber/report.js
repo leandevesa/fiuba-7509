@@ -1,4 +1,186 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("costoProyecto.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("administrarProyectos.feature");
+formatter.feature({
+  "comments": [
+    {
+      "line": 1,
+      "value": "# language: es"
+    }
+  ],
+  "line": 2,
+  "name": "Administrar proyectos",
+  "description": "",
+  "id": "administrar-proyectos",
+  "keyword": "Característica"
+});
+formatter.scenario({
+  "line": 4,
+  "name": "Saber cantidad de empleados de un proyecto",
+  "description": "",
+  "id": "administrar-proyectos;saber-cantidad-de-empleados-de-un-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "que doy de alta un proyecto",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 6,
+  "name": "agrego empleados: \"jr,sr,jr\"",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 7,
+  "name": "el proyecto tiene \"3\" empleados",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "location": "ProyectoSteps.dar_alta_proyecto()"
+});
+formatter.result({
+  "duration": 147264672,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "jr,sr,jr",
+      "offset": 19
+    }
+  ],
+  "location": "ProyectoSteps.agrego_empleados(String)"
+});
+formatter.result({
+  "duration": 5556537,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 19
+    }
+  ],
+  "location": "ProyectoSteps.el_proyecto_tiene_costo_de(int)"
+});
+formatter.result({
+  "duration": 4638108,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 9,
+  "name": "Saber nombre de cliente del proyecto",
+  "description": "",
+  "id": "administrar-proyectos;saber-nombre-de-cliente-del-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 10,
+  "name": "que doy de alta un proyecto para \"pepito srl\"",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 11,
+  "name": "el proyecto va segun lo planeado",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 12,
+  "name": "puedo ver que el proyecto es para \"pepito srl\"",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "pepito srl",
+      "offset": 34
+    }
+  ],
+  "location": "ProyectoSteps.dar_alta_proyecto_con_cliente(String)"
+});
+formatter.result({
+  "duration": 261095,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ProyectoSteps.proyecto_en_tiempo()"
+});
+formatter.result({
+  "duration": 45320,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "pepito srl",
+      "offset": 35
+    }
+  ],
+  "location": "ProyectoSteps.el_proyecto_es_para(String)"
+});
+formatter.result({
+  "duration": 185195,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 14,
+  "name": "Conocer tareas asignadas al proyecto",
+  "description": "",
+  "id": "administrar-proyectos;conocer-tareas-asignadas-al-proyecto",
+  "type": "scenario",
+  "keyword": "Escenario"
+});
+formatter.step({
+  "line": 15,
+  "name": "que doy de alta un proyecto",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 16,
+  "name": "agrego \"3\" tareas",
+  "keyword": "Cuando "
+});
+formatter.step({
+  "line": 17,
+  "name": "puedo ver que el proyecto tiene \"3\" tareas",
+  "keyword": "Entonces "
+});
+formatter.match({
+  "location": "ProyectoSteps.dar_alta_proyecto()"
+});
+formatter.result({
+  "duration": 196609,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 8
+    }
+  ],
+  "location": "ProyectoSteps.agrego_empleados(int)"
+});
+formatter.result({
+  "duration": 293834,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 33
+    }
+  ],
+  "location": "ProyectoSteps.el_proyecto_tiene_tareas(int)"
+});
+formatter.result({
+  "duration": 238245,
+  "status": "passed"
+});
+formatter.uri("costoProyecto.feature");
 formatter.feature({
   "comments": [
     {
@@ -49,7 +231,7 @@ formatter.match({
   "location": "ProyectoSteps.establecer_tickets(String,String)"
 });
 formatter.result({
-  "duration": 234428517,
+  "duration": 752923,
   "status": "passed"
 });
 formatter.match({
@@ -62,7 +244,7 @@ formatter.match({
   "location": "ProyectoSteps.se_asignan_empleados(String)"
 });
 formatter.result({
-  "duration": 372326,
+  "duration": 282116,
   "status": "passed"
 });
 formatter.match({
@@ -75,7 +257,7 @@ formatter.match({
   "location": "ProyectoSteps.el_proyecto_tiene_costo_de(double)"
 });
 formatter.result({
-  "duration": 4555026,
+  "duration": 572248,
   "status": "passed"
 });
 formatter.scenario({
@@ -111,14 +293,14 @@ formatter.match({
   "location": "ProyectoSteps.establecer_presupuesto(double)"
 });
 formatter.result({
-  "duration": 445711,
+  "duration": 252947,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoSteps.proyecto_en_tiempo()"
 });
 formatter.result({
-  "duration": 48972,
+  "duration": 35309,
   "status": "passed"
 });
 formatter.match({
@@ -131,7 +313,7 @@ formatter.match({
   "location": "ProyectoSteps.el_proyecto_tiene_presupuesto_de(double)"
 });
 formatter.result({
-  "duration": 243448,
+  "duration": 220059,
   "status": "passed"
 });
 formatter.uri("estadoProyecto.feature");
@@ -181,21 +363,21 @@ formatter.match({
   "location": "ProyectoSteps.establecer_fecha_finalizacion(String)"
 });
 formatter.result({
-  "duration": 1271412,
+  "duration": 1403194,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoSteps.proyecto_en_tiempo()"
 });
 formatter.result({
-  "duration": 41627,
+  "duration": 55472,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoSteps.el_proyecto_esta_en_tiempo()"
 });
 formatter.result({
-  "duration": 100441,
+  "duration": 166231,
   "status": "passed"
 });
 formatter.scenario({
@@ -231,14 +413,14 @@ formatter.match({
   "location": "ProyectoSteps.establecer_fecha_finalizacion(String)"
 });
 formatter.result({
-  "duration": 677419,
+  "duration": 738815,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoSteps.proyecto_en_tiempo()"
 });
 formatter.result({
-  "duration": 31766,
+  "duration": 35319,
   "status": "passed"
 });
 formatter.match({
@@ -251,7 +433,7 @@ formatter.match({
   "location": "ProyectoSteps.la_operacion_es_rechazada_y_el_saldo_final_es_pesos(String)"
 });
 formatter.result({
-  "duration": 402926,
+  "duration": 600884,
   "status": "passed"
 });
 formatter.scenario({
@@ -287,7 +469,7 @@ formatter.match({
   "location": "ProyectoSteps.establecer_fecha_finalizacion(String)"
 });
 formatter.result({
-  "duration": 562634,
+  "duration": 10599071,
   "status": "passed"
 });
 formatter.match({
@@ -300,14 +482,14 @@ formatter.match({
   "location": "ProyectoSteps.proyecto_se_atrasa_meses(int)"
 });
 formatter.result({
-  "duration": 394053,
+  "duration": 407957,
   "status": "passed"
 });
 formatter.match({
   "location": "ProyectoSteps.el_proyecto_esta_atrasado()"
 });
 formatter.result({
-  "duration": 91119,
+  "duration": 87465,
   "status": "passed"
 });
 formatter.scenario({
@@ -343,7 +525,7 @@ formatter.match({
   "location": "ProyectoSteps.establecer_fecha_finalizacion(String)"
 });
 formatter.result({
-  "duration": 619591,
+  "duration": 478960,
   "status": "passed"
 });
 formatter.match({
@@ -356,7 +538,7 @@ formatter.match({
   "location": "ProyectoSteps.proyecto_se_atrasa_meses(int)"
 });
 formatter.result({
-  "duration": 241348,
+  "duration": 331362,
   "status": "passed"
 });
 formatter.match({
@@ -369,7 +551,7 @@ formatter.match({
   "location": "ProyectoSteps.la_operacion_es_rechazada_y_el_saldo_final_es_pesos(String)"
 });
 formatter.result({
-  "duration": 338394,
+  "duration": 523875,
   "status": "passed"
 });
 });

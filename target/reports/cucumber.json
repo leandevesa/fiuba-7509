@@ -10,6 +10,196 @@
     "elements": [
       {
         "line": 4,
+        "name": "Saber cantidad de empleados de un proyecto",
+        "description": "",
+        "id": "administrar-proyectos;saber-cantidad-de-empleados-de-un-proyecto",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 147264672,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que doy de alta un proyecto",
+            "match": {
+              "location": "ProyectoSteps.dar_alta_proyecto()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 5556537,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "agrego empleados: \"jr,sr,jr\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "jr,sr,jr",
+                  "offset": 19
+                }
+              ],
+              "location": "ProyectoSteps.agrego_empleados(String)"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 4638108,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "el proyecto tiene \"3\" empleados",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 19
+                }
+              ],
+              "location": "ProyectoSteps.el_proyecto_tiene_costo_de(int)"
+            },
+            "keyword": "Entonces "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Saber nombre de cliente del proyecto",
+        "description": "",
+        "id": "administrar-proyectos;saber-nombre-de-cliente-del-proyecto",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 261095,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "que doy de alta un proyecto para \"pepito srl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pepito srl",
+                  "offset": 34
+                }
+              ],
+              "location": "ProyectoSteps.dar_alta_proyecto_con_cliente(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 45320,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "el proyecto va segun lo planeado",
+            "match": {
+              "location": "ProyectoSteps.proyecto_en_tiempo()"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 185195,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "puedo ver que el proyecto es para \"pepito srl\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pepito srl",
+                  "offset": 35
+                }
+              ],
+              "location": "ProyectoSteps.el_proyecto_es_para(String)"
+            },
+            "keyword": "Entonces "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Conocer tareas asignadas al proyecto",
+        "description": "",
+        "id": "administrar-proyectos;conocer-tareas-asignadas-al-proyecto",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 196609,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "que doy de alta un proyecto",
+            "match": {
+              "location": "ProyectoSteps.dar_alta_proyecto()"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 293834,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "agrego \"3\" tareas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 8
+                }
+              ],
+              "location": "ProyectoSteps.agrego_empleados(int)"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 238245,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "puedo ver que el proyecto tiene \"3\" tareas",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 33
+                }
+              ],
+              "location": "ProyectoSteps.el_proyecto_tiene_tareas(int)"
+            },
+            "keyword": "Entonces "
+          }
+        ]
+      }
+    ],
+    "name": "Administrar proyectos",
+    "description": "",
+    "id": "administrar-proyectos",
+    "keyword": "Característica",
+    "uri": "administrarProyectos.feature"
+  },
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "# language: es"
+      }
+    ],
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
         "name": "Saber costo de proyecto con 3 tickets",
         "description": "",
         "id": "valor-del-proyecto;saber-costo-de-proyecto-con-3-tickets",
@@ -18,7 +208,7 @@
         "steps": [
           {
             "result": {
-              "duration": 234428517,
+              "duration": 752923,
               "status": "passed"
             },
             "line": 5,
@@ -40,7 +230,7 @@
           },
           {
             "result": {
-              "duration": 372326,
+              "duration": 282116,
               "status": "passed"
             },
             "line": 6,
@@ -58,7 +248,7 @@
           },
           {
             "result": {
-              "duration": 4555026,
+              "duration": 572248,
               "status": "passed"
             },
             "line": 7,
@@ -86,7 +276,7 @@
         "steps": [
           {
             "result": {
-              "duration": 445711,
+              "duration": 252947,
               "status": "passed"
             },
             "line": 10,
@@ -104,7 +294,7 @@
           },
           {
             "result": {
-              "duration": 48972,
+              "duration": 35309,
               "status": "passed"
             },
             "line": 11,
@@ -116,7 +306,7 @@
           },
           {
             "result": {
-              "duration": 243448,
+              "duration": 220059,
               "status": "passed"
             },
             "line": 12,
@@ -160,7 +350,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1271412,
+              "duration": 1403194,
               "status": "passed"
             },
             "line": 5,
@@ -178,7 +368,7 @@
           },
           {
             "result": {
-              "duration": 41627,
+              "duration": 55472,
               "status": "passed"
             },
             "line": 6,
@@ -190,7 +380,7 @@
           },
           {
             "result": {
-              "duration": 100441,
+              "duration": 166231,
               "status": "passed"
             },
             "line": 7,
@@ -212,7 +402,7 @@
         "steps": [
           {
             "result": {
-              "duration": 677419,
+              "duration": 738815,
               "status": "passed"
             },
             "line": 10,
@@ -230,7 +420,7 @@
           },
           {
             "result": {
-              "duration": 31766,
+              "duration": 35319,
               "status": "passed"
             },
             "line": 11,
@@ -242,7 +432,7 @@
           },
           {
             "result": {
-              "duration": 402926,
+              "duration": 600884,
               "status": "passed"
             },
             "line": 12,
@@ -270,7 +460,7 @@
         "steps": [
           {
             "result": {
-              "duration": 562634,
+              "duration": 10599071,
               "status": "passed"
             },
             "line": 15,
@@ -288,7 +478,7 @@
           },
           {
             "result": {
-              "duration": 394053,
+              "duration": 407957,
               "status": "passed"
             },
             "line": 16,
@@ -306,7 +496,7 @@
           },
           {
             "result": {
-              "duration": 91119,
+              "duration": 87465,
               "status": "passed"
             },
             "line": 17,
@@ -328,7 +518,7 @@
         "steps": [
           {
             "result": {
-              "duration": 619591,
+              "duration": 478960,
               "status": "passed"
             },
             "line": 20,
@@ -346,7 +536,7 @@
           },
           {
             "result": {
-              "duration": 241348,
+              "duration": 331362,
               "status": "passed"
             },
             "line": 21,
@@ -364,7 +554,7 @@
           },
           {
             "result": {
-              "duration": 338394,
+              "duration": 523875,
               "status": "passed"
             },
             "line": 22,
