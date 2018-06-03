@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("debito.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("proyecto.feature");
 formatter.feature({
   "comments": [
     {
@@ -7,133 +7,65 @@ formatter.feature({
     }
   ],
   "line": 2,
-  "name": "Debito de fondos",
+  "name": "Creacion de proyecto",
   "description": "",
-  "id": "debito-de-fondos",
+  "id": "creacion-de-proyecto",
   "keyword": "Característica"
 });
 formatter.scenario({
   "line": 4,
-  "name": "Caja de ahorro con saldo suficiente",
+  "name": "Proyecto con fecha de finalizacion en tiempo",
   "description": "",
-  "id": "debito-de-fondos;caja-de-ahorro-con-saldo-suficiente",
+  "id": "creacion-de-proyecto;proyecto-con-fecha-de-finalizacion-en-tiempo",
   "type": "scenario",
   "keyword": "Escenario"
 });
 formatter.step({
   "line": 5,
-  "name": "que mi caja de ahorro tiene un saldo de \"100\" pesos",
+  "name": "que mi proyecto debe estar listo para el \"16/07/2018\"",
   "keyword": "Dado "
 });
 formatter.step({
   "line": 6,
-  "name": "cuando debito \"50\" pesos",
+  "name": "el proyecto va segun lo planeado",
   "keyword": "Cuando "
 });
 formatter.step({
   "line": 7,
-  "name": "el saldo final es de \"50\" pesos",
+  "name": "la fecha de finalizacion debe ser \"16/07/2018\"",
   "keyword": "Entonces "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "100",
-      "offset": 41
+      "val": "16/07/2018",
+      "offset": 42
     }
   ],
-  "location": "DebitoSteps.que_mi_caja_de_ahorro_tiene_un_saldo_de_pesos(int)"
+  "location": "ProyectoSteps.establecer_fecha_finalizacion(String)"
 });
 formatter.result({
-  "duration": 194202875,
+  "duration": 182103669,
+  "status": "passed"
+});
+formatter.match({
+  "location": "ProyectoSteps.proyecto_en_tiempo()"
+});
+formatter.result({
+  "duration": 41510,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "50",
-      "offset": 15
+      "val": "16/07/2018",
+      "offset": 35
     }
   ],
-  "location": "DebitoSteps.cuando_debito_pesos(int)"
+  "location": "ProyectoSteps.la_operacion_es_rechazada_y_el_saldo_final_es_pesos(String)"
 });
 formatter.result({
-  "duration": 324908,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "50",
-      "offset": 22
-    }
-  ],
-  "location": "DebitoSteps.el_saldo_final_es_de_pesos(int)"
-});
-formatter.result({
-  "duration": 2484769,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 9,
-  "name": "Caja de ahorro sin saldo suficiente",
-  "description": "",
-  "id": "debito-de-fondos;caja-de-ahorro-sin-saldo-suficiente",
-  "type": "scenario",
-  "keyword": "Escenario"
-});
-formatter.step({
-  "line": 10,
-  "name": "que mi caja de ahorro tiene un saldo de \"10\" pesos",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 11,
-  "name": "cuando debito \"20\" pesos",
-  "keyword": "Cuando "
-});
-formatter.step({
-  "line": 12,
-  "name": "la operacion es rechazada y el saldo final es \"10\" pesos",
-  "keyword": "Entonces "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "10",
-      "offset": 41
-    }
-  ],
-  "location": "DebitoSteps.que_mi_caja_de_ahorro_tiene_un_saldo_de_pesos(int)"
-});
-formatter.result({
-  "duration": 144132,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "20",
-      "offset": 15
-    }
-  ],
-  "location": "DebitoSteps.cuando_debito_pesos(int)"
-});
-formatter.result({
-  "duration": 321340,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "10",
-      "offset": 47
-    }
-  ],
-  "location": "DebitoSteps.la_operacion_es_rechazada_y_el_saldo_final_es_pesos(int)"
-});
-formatter.result({
-  "duration": 228381,
+  "duration": 3552718,
   "status": "passed"
 });
 });

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.197707">
-<testcase classname="Debito de fondos" name="Caja de ahorro con saldo suficiente" time="0.197013">
-<system-out><![CDATA[Dado que mi caja de ahorro tiene un saldo de "100" pesos....................passed
-Cuando cuando debito "50" pesos.............................................passed
-Entonces el saldo final es de "50" pesos....................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Debito de fondos" name="Caja de ahorro sin saldo suficiente" time="0.000694">
-<system-out><![CDATA[Dado que mi caja de ahorro tiene un saldo de "10" pesos.....................passed
-Cuando cuando debito "20" pesos.............................................passed
-Entonces la operacion es rechazada y el saldo final es "10" pesos...........passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.185698">
+<testcase classname="Creacion de proyecto" name="Proyecto con fecha de finalizacion en tiempo" time="0.185698">
+<system-out><![CDATA[Dado que mi proyecto debe estar listo para el "16/07/2018"..................passed
+Cuando el proyecto va segun lo planeado.....................................passed
+Entonces la fecha de finalizacion debe ser "16/07/2018".....................passed
 ]]></system-out>
 </testcase>
 </testsuite>
